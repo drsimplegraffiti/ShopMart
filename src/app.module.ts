@@ -5,12 +5,14 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ProductsModule } from './products/products.module';
 import { CarModule } from './car/car.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
     ProductsModule,
     MongooseModule.forRoot(process.env.MONGO_URI),
     CarModule,
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
